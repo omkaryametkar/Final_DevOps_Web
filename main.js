@@ -85,7 +85,7 @@ app.get('/', (req, res) => {
         }
 
         button {
-          width: 100%;
+          width: 90%;
           padding: 10px;
           background-color: #4CAF50;
           color: white;
