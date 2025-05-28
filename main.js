@@ -78,7 +78,7 @@ app.get('/', (req, res) => {
         }
 
         input {
-          width: 100%;
+          width: 99%;
           padding: 8px;
           margin-bottom: 10px;
           border: 1px solid #ccc;
