@@ -1,6 +1,7 @@
 const mysql = require('mysql');
 print("this is database code")
 // MySQL connection configuration
+
 const databaseConnection = mysql.createConnection({
   host: 'localhost',
   user: 'root', // Replace with your MySQL username
@@ -13,7 +14,7 @@ databaseConnection.connect((err) => {
     console.error('Database connection failed:', err.stack);
     return;
   }
-  console.log('Connected to MySQL server');
+  console.log('Connected to MySQL server ready');
 
   // Create the database
   const createDatabaseQuery = 'CREATE DATABASE Movie';
