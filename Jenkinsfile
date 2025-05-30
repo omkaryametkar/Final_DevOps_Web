@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull Code') {
             steps {
-                git url: 'https://github.com/omkaryametkar/Final_DevOps_Web.git'
+                git url: 'git@github.com:omkaryametkar/Final_DevOps_Web.git', credentialsId: 'github-ssh-key'
             }
         }
 
