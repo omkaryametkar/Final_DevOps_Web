@@ -45,7 +45,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
             to={`/movie/${movie.id}`}
             className="text-red-500 hover:text-white bg-transparent hover:bg-red-600 border border-red-500 text-xs font-semibold px-3 py-1 rounded transition-colors duration-200"
           >
-            Book Now
+            Book Nows
           </Link>
         </div>
       </div>
