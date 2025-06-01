@@ -18,7 +18,7 @@ function App() {
     initializeAnimations();
     
     // Update document title
-    document.title = 'Tickets Online';
+    document.title = 'Tickets Online System';
   }, []);
 
   return (
