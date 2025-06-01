@@ -68,22 +68,5 @@ ul {
   margin-right: auto;
 }
 
-li {
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-  font-size: 1rem;
-}
-
-a {
-  text-decoration: none;
-  color: #007BFF;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #0056b3;
-}
-
 
   
