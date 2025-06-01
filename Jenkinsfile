@@ -10,7 +10,12 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'echo "Building app..."'
+                sh '''
+                    echo "Installing dependencies..."
+                    npm install
+                    echo "Building app..."
+                    npm run build
+                '''
             }
         }
 
@@ -18,7 +23,7 @@ pipeline {
             steps {
                 sh '''
                     echo "Deploying app..."
-                    sudo cp -r * /var/www/html/
+                    sudo cp -r build/* /var/www/html/
                     sudo systemctl restart apache2 || sudo systemctl restart httpd
                 '''
             }
