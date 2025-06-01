@@ -18,7 +18,7 @@ function App() {
     initializeAnimations();
     
     // Update document title
-    document.title = 'CineTicket - Book Movie Tickets Online';
+    document.title = 'Tickets Online';
   }, []);
 
   return (
