@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- background-color: #ffffff;
+  background-color: #ffffff;
   color: #333;
   margin: 0;
   padding: 20px;
@@ -24,6 +24,11 @@ form {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 input {
@@ -33,13 +38,13 @@ input {
   border: 1.5px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus {
   border-color: #4CAF50;
   outline: none;
-  box-shadow: 0 0 5px #4CAF50;
+  box-shadow: 0 0 8px #4CAF50;
 }
 
 button {
@@ -52,11 +57,12 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #45a049;
+  transform: scale(1.05);
 }
 
 ul {
@@ -85,5 +91,44 @@ a:hover {
   color: #0056b3;
 }
 
+/* --- New styles added below --- */
 
-               
+/* Smooth page fade-in */
+body {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Styled error message */
+.error {
+  color: #d9534f;
+  background-color: #f9d6d5;
+  border: 1px solid #d43f3a;
+  padding: 10px;
+  border-radius: 4px;
+  max-width: 320px;
+  margin: 10px auto;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Responsive form tweaks */
+@media (max-width: 400px) {
+  form {
+    padding: 15px;
+    max-width: 100%;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Add subtle focus to links when tabbed */
+a:focus {
+  outline: 2px dashed #4CAF50;
+  outline-offset: 3px;
+}
