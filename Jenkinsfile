@@ -11,7 +11,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Building app..."'
-                // Add actual build steps if needed
             }
         }
 
@@ -20,6 +19,7 @@ pipeline {
                 sh '''
                     echo "Deploying app..."
                     sudo cp -r * /var/www/html/
+                    sudo systemctl restart apache2 || sudo systemctl restart httpd
                 '''
             }
         }
