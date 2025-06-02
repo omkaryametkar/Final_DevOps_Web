@@ -3,7 +3,7 @@ import { Movie, Theater, Showing, Booking, User } from '../types';
 export const movies: Movie[] = [
   {
     id: "1",
-    title: "Interstellar 25",
+    title: "Interstellar 256t",
     posterUrl: "https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg",
     bannerUrl: "https://images.pexels.com/photos/1252873/pexels-photo-1252873.jpeg",
     releaseDate: "2025-05-15",
