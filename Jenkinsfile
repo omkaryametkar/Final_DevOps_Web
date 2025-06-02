@@ -4,27 +4,22 @@ pipeline {
     stages {
         stage('Pull Code') {
             steps {
-                git url: 'git@github.com:omkaryametkar/Final_DevOps_Web.git', credentialsId: 'github-ssh-key'
+                git url: 'https://github.com/omkaryametkar/Final_DevOps_Web.git'
             }
         }
 
-        stage('Build') {
+        stage('Build Docker Image') {
             steps {
-                sh '''
-                    echo "Installing dependencies..."
-                    npm install
-                    echo "Building app..."
-                    npm run build
-                '''
+                sh 'docker build -t my-node-app:latest .'
             }
         }
 
-        stage('Deploy') {
+        stage('Run Docker Container') {
             steps {
                 sh '''
-                    echo "Deploying app..."
-                    sudo cp -r build/* /var/www/html/
-                    sudo systemctl restart apache2 || sudo systemctl restart httpd
+                    docker stop my-node-container || true
+                    docker rm my-node-container || true
+                    docker run -d --name my-node-container -p 3000:3000 my-node-app:latest
                 '''
             }
         }
