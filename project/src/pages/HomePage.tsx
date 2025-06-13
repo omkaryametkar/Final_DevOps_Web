@@ -18,7 +18,7 @@ const HomePage: React.FC = () => {
       <Hero featuredMovie={heroMovie} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <MovieSlider title="Featured Movie" movies={featuredMovies} />
+        <MovieSlider title="Featured Movies" movies={featuredMovies} />
         <MovieSlider title="Now Showing" movies={regularMovies} />
         <MovieSlider title="Coming Soon" movies={comingSoonMovies} />
       </div>
