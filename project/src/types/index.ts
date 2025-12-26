@@ -7,7 +7,7 @@ export interface Movie {
   duration: number; // in minutes
   rating: string; // PG, PG-13, R, etc.
   genre: string[];
-  director: string;
+  director: string;   // this is image page 
   cast: string[];
   synopsis: string;
   trailerUrl?: string;
